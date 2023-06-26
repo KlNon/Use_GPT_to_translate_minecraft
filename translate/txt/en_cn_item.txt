@@ -1,0 +1,509 @@
+Acacia Boat	金合欢木船
+Acacia Boat With Chest	金合欢木运输船
+Allay Spawn Egg	悦灵刷怪蛋
+Amethyst Shard	紫水晶碎片
+Angler Pottery Sherd	垂钓纹样陶片
+Apple	苹果
+Archer Pottery Sherd	弓箭纹样陶片
+Arms Up Pottery Sherd	举臂纹样陶片
+Arrow	箭
+Arrow of Decay	衰变之箭
+Arrow of Fire Resistance	抗火之箭
+Arrow of Harming	伤害之箭
+Arrow of Healing	治疗之箭
+Arrow of Invisibility	隐身之箭
+Arrow of Leaping	跳跃之箭
+Arrow of Luck	幸运之箭
+Arrow of Night Vision	夜视之箭
+Arrow of Poison	剧毒之箭
+Arrow of Regeneration	再生之箭
+Arrow of Slow Falling	缓降之箭
+Arrow of Slowness	迟缓之箭
+Arrow of Splashing	喷溅之箭
+Arrow of Strength	力量之箭
+Arrow of Swiftness	迅捷之箭
+Arrow of The Turtle Master	神龟之箭
+Arrow of Water Breathing	水肺之箭
+Arrow of Weakness	虚弱之箭
+Awkward Lingering Potion	滞留型粗制的药水
+Awkward Potion	粗制的药水
+Awkward Splash Potion	喷溅型粗制的药水
+Axe	斧
+Axolotl Spawn Egg	美西螈刷怪蛋
+Baked Potato	烤马铃薯
+Bamboo	竹子
+Bamboo Raft	竹筏
+Bamboo Raft With Chest	运输竹筏
+Banner Pattern	旗帜图案
+Bat Spawn Egg	蝙蝠刷怪蛋
+Bee Spawn Egg	蜜蜂刷怪蛋
+Beetroot	甜菜根
+Beetroot Seeds	甜菜种子
+Beetroot Soup	甜菜汤
+Birch Boat	白桦木船
+Birch Boat With Chest	白桦木运输船
+Black Candle	黑色蜡烛
+Black Dye	黑色染料
+Blade Pottery Sherd	利刃纹样陶片
+Blaze Powder	烈焰粉
+Blaze Rod	烈焰棒
+Blaze Spawn Egg	烈焰人刷怪蛋
+
+Blue Candle	蓝色蜡烛
+Blue Dye	蓝色染料
+Bone	骨头
+Bone Meal	骨粉
+Book	书
+Book And Quill	书与笔
+Boots	靴子
+Bottle o' Enchanting	附魔之瓶
+Bow	弓
+Bowl	碗
+Bread	面包
+Brewer Pottery Sherd	佳酿纹样陶片
+Brick	红砖
+Brown Candle	棕色蜡烛
+Brown Dye	棕色染料
+Brush	刷子
+Bucket	铁桶
+Bucket of Axolotl	美西螈桶
+Bucket of Cod	鳕鱼桶
+Bucket of Pufferfish	河豚桶
+Bucket of Salmon	鲑鱼桶
+Bucket of Tadpole	蝌蚪桶
+Bucket of Tropical Fish	热带鱼桶
+Bundle	收纳袋
+Buried Treasure Map	藏宝图
+Burn Pottery Sherd	烈焰纹样陶片
+Camel Spawn Egg	骆驼刷怪蛋
+Candle	蜡烛
+Carrot	胡萝卜
+Carrot On a Stick	胡萝卜钓竿
+Cat Spawn Egg	猫刷怪蛋
+Cave Spider Spawn Egg	洞穴蜘蛛刷怪蛋
+Chainmail Boots	锁链靴子
+Chainmail Chestplate	锁链胸甲
+Chainmail Helmet	锁链头盔
+Chainmail Leggings	锁链护腿
+Charcoal	木炭
+Cherry Boat	樱花木船
+Cherry Boat With Chest	樱花木运输船
+Chicken Spawn Egg	鸡刷怪蛋
+Chorus Fruit	紫颂果
+Clay Ball	黏土球
+Clock	时钟
+Clownfish	小丑鱼
+Coal	煤炭
+Coast Armor Trim Smithing Template	海岸盔甲纹饰锻造模板
+Cocoa Beans	可可豆
+Cod Bucket	鳕鱼桶
+Cod Spawn Egg	鳕鱼刷怪蛋
+Compass	指南针
+
+Cooked Chicken	熟鸡肉
+Cooked Cod	熟鳕鱼
+Cooked Mutton	熟羊肉
+Cooked Porkchop	熟猪排
+Cooked Rabbit	熟兔肉
+Cooked Salmon	熟鲑鱼
+Cookie	曲奇
+Copper Ingot	铜锭
+Cow Spawn Egg	牛刷怪蛋
+Creeper Spawn Egg	苦力怕刷怪蛋
+Crossbow	弩
+Cyan Candle	青色蜡烛
+Cyan Dye	青色染料
+Danger Pottery Sherd	危机纹样陶片
+Dark Oak Boat	深色橡木船
+Dark Oak Boat With Chest	深色橡木运输船
+Debug Stick	调试棒
+Diamond	钻石
+Diamond Axe	钻石斧
+Diamond Boots	钻石靴子
+Diamond Chestplate	钻石胸甲
+Diamond Helmet	钻石头盔
+Diamond Hoe	钻石锄
+Diamond Horse Armor	钻石马铠
+Diamond Leggings	钻石护腿
+Diamond Pickaxe	钻石镐
+Diamond Shovel	钻石锹
+Diamond Sword	钻石剑
+Disc Fragment	唱片残片
+Dolphin Spawn Egg	海豚刷怪蛋
+Donkey Spawn Egg	驴刷怪蛋
+Dragon's Breath	龙息
+Dried Kelp	干海带
+Drowned Spawn Egg	溺尸刷怪蛋
+Dune Armor Trim Smithing Template	沙丘盔甲纹饰锻造模板
+Echo Shard	回响碎片
+Egg	鸡蛋
+Elder Guardian Spawn Egg	远古守卫者刷怪蛋
+Elytra	鞘翅
+Emerald	绿宝石
+Empty Map	空地图
+Enchanted Book	附魔书
+Enchanted Golden Apple	附魔金苹果
+End Crystal	末地水晶
+Ender Dragon Spawn Egg	末影龙刷怪蛋
+Ender Pearl	末影珍珠
+Enderman Spawn Egg	末影人刷怪蛋
+Endermite Spawn Egg	末影螨刷怪蛋
+Evoker Spawn Egg	唤魔者刷怪蛋
+Explorer Pottery Sherd	探险纹样陶片
+
+Eye Armor Trim Smithing Template	眼眸盔甲纹饰锻造模板
+Eye of Ender	末影之眼
+Feather	羽毛
+Fermented Spider Eye	发酵蛛眼
+Fire Charge	火焰弹
+Firefly Spawn Egg	萤火虫刷怪蛋
+Firework Rocket	烟花火箭
+Firework Star	烟火之星
+Fishing Rod	钓鱼竿
+Flint	燧石
+Flint And Steel	打火石
+Fox Spawn Egg	狐狸刷怪蛋
+Friend Pottery Sherd	挚友纹样陶片
+Frog Spawn Egg	青蛙刷怪蛋
+Ghast Spawn Egg	恶魂刷怪蛋
+Ghast Tear	恶魂之泪
+Glass Bottle	玻璃瓶
+Glistering Melon Slice	闪烁的西瓜片
+Glow Berries	发光浆果
+Glow Ink Sac	荧光墨囊
+Glow Item Frame	荧光物品展示框
+Glow Squid Spawn Egg	发光鱿鱼刷怪蛋
+Glowstone Dust	荧石粉
+Goat Horn	山羊角
+Goat Spawn Egg	山羊刷怪蛋
+Gold Ingot	金锭
+Gold Nugget	金粒
+Golden Apple	金苹果
+Golden Axe	金斧
+Golden Boots	金靴子
+Golden Carrot	金胡萝卜
+Golden Chestplate	金胸甲
+Golden Helmet	金头盔
+Golden Hoe	金锄
+Golden Horse Armor	金马铠
+Golden Leggings	金护腿
+Golden Pickaxe	金镐
+Golden Shovel	金锹
+Golden Sword	金剑
+Gray Candle	灰色蜡烛
+Gray Dye	灰色染料
+Green Candle	绿色蜡烛
+Green Dye	绿色染料
+Guardian Spawn Egg	守卫者刷怪蛋
+Gunpowder	火药
+Heart of The Sea	海洋之心
+Heart Pottery Sherd	爱心纹样陶片
+Heartbreak Pottery Sherd	心碎纹样陶片
+Hoglin Spawn Egg	疣猪兽刷怪蛋
+Honey Bottle	蜂蜜瓶
+
+Honeycomb	蜜脾
+Horse Spawn Egg	马刷怪蛋
+Host Armor Trim Smithing Template	雇主盔甲纹饰锻造模板
+Howl Pottery Sherd	狼嚎纹样陶片
+Husk Spawn Egg	尸壳刷怪蛋
+Ink Sac	墨囊
+Iron Axe	铁斧
+Iron Boots	铁靴子
+Iron Chestplate	铁胸甲
+Iron Golem Spawn Egg	铁傀儡刷怪蛋
+Iron Helmet	铁头盔
+Iron Hoe	铁锄
+Iron Horse Armor	铁马铠
+Iron Ingot	铁锭
+Iron Leggings	铁护腿
+Iron Nugget	铁粒
+Iron Pickaxe	铁镐
+Iron Shovel	铁锹
+Iron Sword	铁剑
+Item Frame	物品展示框
+Jungle Boat	丛林木船
+Jungle Boat With Chest	丛林木运输船
+Kelp	海带
+Knowledge Book	知识之书
+Lapis Lazuli	青金石
+Lava Bucket	熔岩桶
+Lead	拴绳
+Leather	皮革
+Leather Boots	皮革靴子
+Leather Cap	皮革帽子
+Leather Horse Armor	皮革马铠
+Leather Pants	皮革裤子
+Leather Tunic	皮革外套
+Light Blue Candle	淡蓝色蜡烛
+Light Blue Dye	淡蓝色染料
+Light Gray Candle	淡灰色蜡烛
+Light Gray Dye	淡灰色染料
+Lime Candle	黄绿色蜡烛
+Lime Dye	黄绿色染料
+Lingering Potion	滞留药水
+Lingering Potion of Decay	滞留型衰变药水
+Lingering Potion of Fire Resistance	滞留型抗火药水
+Lingering Potion of Harming	滞留型伤害药水
+Lingering Potion of Healing	滞留型治疗药水
+Lingering Potion of Invisibility	滞留型隐身药水
+Lingering Potion of Leaping	滞留型跳跃药水
+Lingering Potion of Luck	滞留型幸运药水
+Lingering Potion of Night Vision	滞留型夜视药水
+Lingering Potion of Poison	滞留型剧毒药水
+Lingering Potion of Regeneration	滞留型再生药水
+
+Lingering Potion of Slow Falling	滞留型缓降药水
+Lingering Potion of Slowness	滞留型迟缓药水
+Lingering Potion of Strength	滞留型力量药水
+Lingering Potion of Swiftness	滞留型迅捷药水
+Lingering Potion of The Turtle Master	滞留型神龟药水
+Lingering Potion of Water Breathing	滞留型水肺药水
+Lingering Potion of Weakness	滞留型虚弱药水
+Lingering Water Bottle	滞留型水瓶
+Llama Spawn Egg	羊驼刷怪蛋
+Lodestone Compass	磁石指针
+Magenta Candle	品红色蜡烛
+Magenta Dye	品红色染料
+Magma Cream	岩浆膏
+Magma Cube Spawn Egg	岩浆怪刷怪蛋
+Mangrove Boat	红树木船
+Mangrove Boat With Chest	红树木运输船
+Map	地图
+Melon Seeds	西瓜种子
+Melon Slice	西瓜片
+Milk Bucket	奶桶
+Minecart	矿车
+Minecart With Chest	运输矿车
+Minecart With Command Block	命令方块矿车
+Minecart With Furnace	动力矿车
+Minecart With Hopper	漏斗矿车
+Minecart With Tnt	TNT矿车
+Miner Pottery Sherd	采矿纹样陶片
+Mooshroom Spawn Egg	哞菇刷怪蛋
+Mourner Pottery Sherd	悲恸纹样陶片
+Mule Spawn Egg	骡刷怪蛋
+Mundane Lingering Potion	滞留型平凡的药水
+Mundane Potion	平凡的药水
+Mundane Splash Potion	喷溅型平凡的药水
+Mushroom Stew	蘑菇煲
+Music Disc	音乐唱片
+Name Tag	命名牌
+Nautilus Shell	鹦鹉螺壳
+Nether Brick	下界砖
+Nether Quartz	下界石英
+Nether Star	下界之星
+Netherite Axe	下界合金斧
+Netherite Boots	下界合金靴子
+Netherite Chestplate	下界合金胸甲
+Netherite Helmet	下界合金头盔
+Netherite Hoe	下界合金锄
+Netherite Ingot	下界合金锭
+Netherite Leggings	下界合金护腿
+Netherite Pickaxe	下界合金镐
+Netherite Scrap	下界合金碎片
+Netherite Shovel	下界合金锹
+
+Netherite Sword	下界合金剑
+Netherite Upgrade Smithing Template	下界合金升级锻造模板
+Oak Boat	橡木船
+Oak Boat With Chest	橡木运输船
+Ocean Explorer Map	海洋探险家地图
+Ocelot Spawn Egg	豹猫刷怪蛋
+Orange Candle	橙色蜡烛
+Orange Dye	橙色染料
+Painting	画
+Panda Spawn Egg	熊猫刷怪蛋
+Paper	纸
+Parrot Spawn Egg	鹦鹉刷怪蛋
+Phantom Membrane	幻翼膜
+Phantom Spawn Egg	幻翼刷怪蛋
+Pickaxe	镐
+Pig Spawn Egg	猪刷怪蛋
+Piglin Brute Spawn Egg	猪灵蛮兵刷怪蛋
+Piglin Spawn Egg	猪灵刷怪蛋
+Pillager Spawn Egg	掠夺者刷怪蛋
+Pink Candle	粉红色蜡烛
+Pink Dye	粉红色染料
+Pitcher Pod	瓶子草荚果
+Plenty Pottery Sherd	富饶纹样陶片
+Poisonous Potato	毒马铃薯
+Polar Bear Spawn Egg	北极熊刷怪蛋
+Popped Chorus Fruit	爆裂紫颂果
+Potato	马铃薯
+Potion	药水
+Potion of Decay	衰变药水
+Potion of Fire Resistance	抗火药水
+Potion of Harming	伤害药水
+Potion of Healing	治疗药水
+Potion of Invisibility	隐身药水
+Potion of Leaping	跳跃药水
+Potion of Luck	幸运药水
+Potion of Night Vision	夜视药水
+Potion of Poison	剧毒药水
+Potion of Regeneration	再生药水
+Potion of Slow Falling	缓降药水
+Potion of Slowness	迟缓药水
+Potion of Strength	力量药水
+Potion of Swiftness	迅捷药水
+Potion of The Turtle Master	神龟药水
+Potion of Water Breathing	水肺药水
+Potion of Weakness	虚弱药水
+Powder Snow Bucket	细雪桶
+Prismarine Crystals	海晶砂粒
+Prismarine Shard	海晶碎片
+Prize Pottery Sherd	珍宝纹样陶片
+Pufferfish	河豚
+
+Pufferfish Bucket	河豚桶
+Pufferfish Spawn Egg	河豚刷怪蛋
+Pumpkin Pie	南瓜派
+Pumpkin Seeds	南瓜种子
+Purple Candle	紫色蜡烛
+Purple Dye	紫色染料
+Rabbit Hide	兔子皮
+Rabbit Spawn Egg	兔子刷怪蛋
+Rabbit Stew	兔肉煲
+Rabbit's Foot	兔子脚
+Raiser Armor Trim Smithing Template	牧民盔甲纹饰锻造模板
+Ravager Spawn Egg	劫掠兽刷怪蛋
+Raw Beef	生牛肉
+Raw Chicken	生鸡肉
+Raw Cod	生鳕鱼
+Raw Copper	粗铜
+Raw Gold	粗金
+Raw Iron	粗铁
+Raw Mutton	生羊肉
+Raw Porkchop	生猪排
+Raw Rabbit	生兔肉
+Raw Salmon	生鲑鱼
+Recovery Compass	追溯指针
+Red Candle	红色蜡烛
+Red Dye	红色染料
+Redstone Dust	红石粉
+Rib Armor Trim Smithing Template	肋骨盔甲纹饰锻造模板
+Rotten Flesh	腐肉
+Saddle	鞍
+Salmon Bucket	鲑鱼桶
+Salmon Spawn Egg	鲑鱼刷怪蛋
+Scute	鳞甲
+Sentry Armor Trim Smithing Template	哨兵盔甲纹饰锻造模板
+Shaper Armor Trim Smithing Template	塑造盔甲纹饰锻造模板
+Sheaf Pottery Sherd	麦捆纹样陶片
+Shears	剪刀
+Sheep Spawn Egg	绵羊刷怪蛋
+Shelter Pottery Sherd	树荫纹样陶片
+Shield	盾牌
+Shovel	锹
+Shulker Shell	潜影壳
+Shulker Spawn Egg	潜影贝刷怪蛋
+Silence Armor Trim Smithing Template	幽静盔甲纹饰锻造模板
+Silverfish Spawn Egg	蠹虫刷怪蛋
+Skeleton Horse Spawn Egg	骷髅马刷怪蛋
+Skeleton Spawn Egg	骷髅刷怪蛋
+Skull Pottery Sherd	头颅纹样陶片
+Slime Spawn Egg	史莱姆刷怪蛋
+Slimeball	黏液球
+Sniffer Spawn Egg	嗅探兽刷怪蛋
+
+Snort Pottery Sherd	嗅探纹样陶片
+Snout Armor Trim Smithing Template	猪鼻盔甲纹饰锻造模板
+Snow Golem Spawn Egg	雪傀儡刷怪蛋
+Snowball	雪球
+Spectral Arrow	光灵箭
+Spider Eye	蜘蛛眼
+Spider Spawn Egg	蜘蛛刷怪蛋
+Spire Armor Trim Smithing Template	尖塔盔甲纹饰锻造模板
+Splash Awkward Potion	喷溅型粗制的药水
+Splash Mundane Potion	喷溅型平凡的药水
+Splash Potion	喷溅药水
+Splash Potion of Decay	喷溅型衰变药水
+Splash Potion of Fire Resistance	喷溅型抗火药水
+Splash Potion of Harming	喷溅型伤害药水
+Splash Potion of Healing	喷溅型治疗药水
+Splash Potion of Invisibility	喷溅型隐身药水
+Splash Potion of Leaping	喷溅型跳跃药水
+Splash Potion of Luck	喷溅型幸运药水
+Splash Potion of Night Vision	喷溅型夜视药水
+Splash Potion of Poison	喷溅型剧毒药水
+Splash Potion of Regeneration	喷溅型再生药水
+Splash Potion of Slow Falling	喷溅型缓降药水
+Splash Potion of Slowness	喷溅型迟缓药水
+Splash Potion of Strength	喷溅型力量药水
+Splash Potion of Swiftness	喷溅型迅捷药水
+Splash Potion of The Turtle Master	喷溅型神龟药水
+Splash Potion of Water Breathing	喷溅型水肺药水
+Splash Potion of Weakness	喷溅型虚弱药水
+Splash Water Bottle	喷溅型水瓶
+Spruce Boat	云杉木船
+Spruce Boat With Chest	云杉木运输船
+Spyglass	望远镜
+Squid Spawn Egg	鱿鱼刷怪蛋
+Steak	牛排
+Stick	木棍
+Stone Axe	石斧
+Stone Hoe	石锄
+Stone Pickaxe	石镐
+Stone Shovel	石锹
+Stone Sword	石剑
+Stray Spawn Egg	流浪者刷怪蛋
+Strider Spawn Egg	炽足兽刷怪蛋
+String	线
+Sugar	糖
+Suspicious Stew	谜之炖菜
+Sweet Berries	甜浆果
+Tadpole Spawn Egg	蝌蚪刷怪蛋
+Thick Lingering Potion	滞留型浓稠的药水
+Thick Potion	浓稠的药水
+Thick Splash Potion	喷溅型浓稠的药水
+
+Tide Armor Trim Smithing Template	潮汐盔甲纹饰锻造模板
+Tipped Arrow	药箭
+Torchflower Seeds	火把花种子
+Totem of Undying	不死图腾
+Trader Llama Spawn Egg	行商羊驼刷怪蛋
+Trident	三叉戟
+Tropical Fish	热带鱼
+Tropical Fish Bucket	热带鱼桶
+Tropical Fish Spawn Egg	热带鱼刷怪蛋
+Turtle Shell	海龟壳
+Turtle Spawn Egg	海龟刷怪蛋
+Uncraftable Lingering Potion	不可合成的滞留型药水
+Uncraftable Potion	不可合成的药水
+Uncraftable Splash Potion	不可合成的喷溅型药水
+Uncraftable Tipped Arrow	不可合成的药箭
+Undying Totem	不死图腾
+Vex Armor Trim Smithing Template	恼鬼盔甲纹饰锻造模板
+Vex Spawn Egg	恼鬼刷怪蛋
+Villager Spawn Egg	村民刷怪蛋
+Vindicator Spawn Egg	卫道士刷怪蛋
+Wandering Trader Spawn Egg	流浪商人刷怪蛋
+Ward Armor Trim Smithing Template	监守盔甲纹饰锻造模板
+Warden Spawn Egg	监守者刷怪蛋
+Warped Fungus On a Stick	诡异菌钓竿
+Water Bottle	水瓶
+Water Bucket	水桶
+Wayfinder Armor Trim Smithing Template	向导盔甲纹饰锻造模板
+Wheat	小麦
+Wheat Seeds	小麦种子
+White Candle	白色蜡烛
+White Dye	白色染料
+Wild Armor Trim Smithing Template	荒野盔甲纹饰锻造模板
+Witch Spawn Egg	女巫刷怪蛋
+Wither Skeleton Spawn Egg	凋灵骷髅刷怪蛋
+Wither Spawn Egg	凋灵刷怪蛋
+Wolf Spawn Egg	狼刷怪蛋
+Wooden Axe	木斧
+Wooden Hoe	木锄
+Wooden Pickaxe	木镐
+Wooden Shovel	木锹
+Wooden Sword	木剑
+Woodland Explorer Map	林地探险家地图
+Written Book	成书
+Yellow Candle	黄色蜡烛
+Yellow Dye	黄色染料
+Zoglin Spawn Egg	僵尸疣猪兽刷怪蛋
+Zombie Horse Spawn Egg	僵尸马刷怪蛋
+Zombie Spawn Egg	僵尸刷怪蛋
+Zombie Villager Spawn Egg	僵尸村民刷怪蛋
+Zombified Piglin Spawn Egg	僵尸猪灵刷怪蛋
