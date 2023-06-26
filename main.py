@@ -7,10 +7,10 @@ from googletrans import Translator
 import openai
 
 # .jar文件所在的目录
-jar_dir = 'E:/FILE/MC/MCs/Minecraft/.minecraft/versions/backup/mods/ZH_CN/扁平化'
+jar_dir = ''
 
 # 提取的文件夹要放置的目录
-output_dir = 'E:/FILE/MC/MCs/Minecraft/.minecraft/versions/backup/mods/ZH_CN/assets'
+output_dir = ''
 
 # 你的OpenAI API密钥
 openai.api_key = ""
