@@ -54,7 +54,9 @@ def compare_assets(asset_path1, asset_path2):
                     print(f"\n{get_third_last_part(en_us_path)}----------have different keys :{diff_keys}")
 
 
-if __name__ == "__main__":
+def compare_all_assets():
     asset_path1 = 'E:/FILE/MC/MCs/Minecraft/.minecraft/versions/backup/mods/ZH_CN/assets/assets'  # 提供您的第一个assets文件夹路径
     asset_path2 = "E:/FILE/MC/MCs/Minecraft/.minecraft/versions/1.19.2-Forge_43.2.14/global_packs/required_resources/KlNon's-Pack/assets"  # 提供您的第二个assets文件夹路径
+    asset_path3 = "E:/FILE/MC/MCs/Minecraft/.minecraft/versions/1.19.2-Forge_43.2.14/resourcepacks/Minecraft-Mod-Language-Modpack-Converted-9/assets"
     compare_assets(asset_path1, asset_path2)
+    compare_assets(asset_path1, asset_path3)
