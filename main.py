@@ -59,25 +59,9 @@ def get_language_json_in_jar():
                     if name.startswith('assets/') and 'lang/en_us.json' in name:
                         # 提取lang/en_us.json文件
                         jar_file.extract(name, path=output_dir)
-                        en_file = os.path.join(output_dir, name)  # 获取英文json文件路径
-
                     if name.startswith('assets/') and 'lang/zh_cn.json' in name:
                         # 提取lang/zh_cn.json文件
                         jar_file.extract(name, path=output_dir)
-                        zh_file = os.path.join(output_dir, name)  # 获取中文json文件路径
-
-                    # 比较英文和中文,将已有的中文放入英文文件中,减少汉化工作量
-                    with open(en_file, 'r', encoding='utf-8') as en_f, \
-                            open(zh_file, 'r', encoding='utf-8') as zh_f:
-                        en_dict = json.load(en_f)
-                        zh_dict = json.load(zh_f)
-
-                    for key in en_dict.keys():
-                        if key in zh_dict:
-                            en_dict[key] = zh_dict[key]  # 更新英文文件中的键值对
-
-                    with open(en_file, 'w', encoding='utf-8') as en_f:
-                        json.dump(en_dict, en_f, ensure_ascii=False, indent=4)
 
 
 def find_en_us_json():
@@ -241,8 +225,10 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
         total_translated_data = {}
 
         for key, val in data_to_translate.items():
-            total_chars = sum(1 for char in val if re.search('[a-zA-Z\u4e00-\u9fff]', char))
-            chinese_chars = sum(1 for char in val if '\u4e00' <= char <= '\u9fff')
+            # 剔除拥有类似于[minecraft:plains, byg:alps]的字符干扰统计中文占比
+            no_square_brackets_val =re.sub(r'\[.*?\]', '', val)
+            total_chars = sum(1 for char in no_square_brackets_val if re.search('[a-zA-Z\u4e00-\u9fff]', char))
+            chinese_chars = sum(1 for char in no_square_brackets_val if '\u4e00' <= char <= '\u9fff')
             chinese_ratio = chinese_chars / total_chars if total_chars > 0 else 0
 
             if (total_chars <= 20 or chinese_ratio < 0.4) and chinese_ratio < 0.5:
@@ -351,7 +337,8 @@ if __name__ == "__main__":
                             break
                         print(f"{i} {folder_name}")
                         trans_with_words(data, name, folder_name)
-                        cost, complete_translated,auto_control_count = trans_with_gpt(data, name, folder_name, auto_control_count)
+                        cost, complete_translated, auto_control_count = trans_with_gpt(data, name, folder_name,
+                                                                                       auto_control_count)
                         total_cost = total_cost + cost
 
                         print(f"-Use all tokens:{total_cost}")
