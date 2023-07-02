@@ -1,3 +1,6 @@
 {
-  "yungsextras": "True"
+    "yungsextras": true,
+    "you_died": true,
+    "xaeroworldmap": true,
+    "xaerominimap": true
 }
