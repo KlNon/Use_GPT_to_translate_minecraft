@@ -1,7 +1,7 @@
 """
 @Project ：list_ZH_CN 
 @File    ：txtToJson
-@Describe：
+@Describe：用于最开始的时候将对照表保存为JSON,现在已经可以不用管了
 @Author  ：KlNon
 @Date    ：2023/6/26 15:33 
 """

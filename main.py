@@ -18,9 +18,9 @@ output_dir = 'E:/FILE/MC/MCs/Minecraft/.minecraft/versions/backup/mods/ZH_CN/ass
 openai.api_key = ""
 
 # 中英对照表的路径
-translation_table_path_words = 'words.json'
-translation_table_path_word_groups = 'word_groups.json'
-gpt_path_word_groups = 'gpt_groups.json'
+translation_table_path_words = 'translate/other_json/words.json'
+translation_table_path_word_groups = 'translate/other_json/word_groups.json'
+gpt_path_word_groups = 'translate/other_json/gpt_groups.json'
 success_translated_path = 'success_translated.json'
 # 谷歌翻译
 translator = Translator()
@@ -144,6 +144,7 @@ def trans_with_words(data, name, folder_name):
     # 使用中英对照表进行翻译（忽略大小写）,如果没有则使用谷歌翻译进行翻译单词
     for key in data:
         # 计算中文占比,占比高的直接跳过
+        # TODO 可以替换一遍,不必跳过
         val = data[key]
         total_chars = sum(1 for char in val if re.search('[a-zA-Z\u4e00-\u9fff]', char))  # 仅计算英文和中文字符的总数
         chinese_chars = sum(1 for char in val if '\u4e00' <= char <= '\u9fff')  # 计算字符串中的中文字符数量
@@ -226,7 +227,7 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
 
         for key, val in data_to_translate.items():
             # 剔除拥有类似于[minecraft:plains, byg:alps]的字符干扰统计中文占比
-            no_square_brackets_val =re.sub(r'\[.*?\]', '', val)
+            no_square_brackets_val = re.sub(r'\[.*?\]', '', val)
             total_chars = sum(1 for char in no_square_brackets_val if re.search('[a-zA-Z\u4e00-\u9fff]', char))
             chinese_chars = sum(1 for char in no_square_brackets_val if '\u4e00' <= char <= '\u9fff')
             chinese_ratio = chinese_chars / total_chars if total_chars > 0 else 0
@@ -304,9 +305,9 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
 if __name__ == "__main__":
     cost = 0
     total_cost = 0
-    # 清洗翻译文件
-    get_language_json_in_jar()
-    compare_all_assets()
+    # 清洗翻译文件,第一次请取消下面两条的注释
+    # get_language_json_in_jar()
+    # compare_all_assets()
 
     with open(gpt_path_word_groups, 'r', encoding='utf-8') as f:
         gpt_word_groups = json.load(f)
@@ -371,3 +372,6 @@ if __name__ == "__main__":
 
     # 输出最终结果
     print(high_rate_of_words)
+
+# TODO 新功能,增加在将en和zh对比的内容制成json,方便长句翻译,如一个mod中的物品翻译了,但句子中该物品仍是英文,那么该长句会在对照翻译中替换该物品的英文
+# TODO 替换英文可以用replace试试
