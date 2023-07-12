@@ -40,8 +40,8 @@ def extract_and_remove_keys(source_file, target_file):
 
 
 # 指定原始JSON文件和目标JSON文件的路径
-source_file_path = '../translate/other_json/words.json'
-target_file_path = '../translate/other_json/word_groups.json'
+source_file_path = '../translate/json/other_json/words.json'
+target_file_path = '../translate/json/other_json/word_groups.json'
 
 # 调用函数进行处理
 extract_and_remove_keys(source_file_path, target_file_path)

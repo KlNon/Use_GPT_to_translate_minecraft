@@ -32,4 +32,4 @@ def merge_json_files(directory, output_filename):
 
 
 # 使用函数
-merge_json_files('E:/MyPythonJob/list_ZH_CN/getJson', '../translate/other_json/words.json')
+merge_json_files('E:/MyPythonJob/list_ZH_CN/getJson', '../translate/json/other_json/words.json')
