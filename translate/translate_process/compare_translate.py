@@ -18,7 +18,7 @@ def check_and_replace_word_group(data_en, key, word_group, translation_table):
     combined_word = ' '.join(word_group).lower()
     if combined_word in translation_table:
         combined_translation = translation_table[combined_word]
-        if combined_translation:
+        if combined_translation and chinese_ratio(combined_translation, 0.7):
             data_en[key] = combined_translation
             return True
     return False
@@ -30,30 +30,10 @@ def generate_word_combinations(words):
             yield words[i:i + r]
 
 
-def count_chars(string, lang):
-    """Count the number of English or Chinese characters in a string."""
-    if lang.lower() == 'en':
-        return len(re.findall(r'[a-zA-Z]', string))
-    elif lang.lower() == 'zh':
-        return len(re.findall(r'[\u4e00-\u9fff]', string))
-
-
 def add_space_if_necessary(string):
     """Add space between words if English characters make up more than 30% of the string."""
-    total_chars = len(string)
-    english_chars = count_chars(string, 'en')
-    chinese_chars = count_chars(string, 'zh')
-
-    # Only consider Chinese and English characters
-    total_considered_chars = english_chars + chinese_chars
-
-    if total_considered_chars == 0:
-        return string
-
-    english_ratio = english_chars / total_considered_chars
-
-    if english_ratio > 0.3:
-        words = re.findall(r'\w+', string)
+    if not chinese_ratio(string, 0.7):
+        words = string.split()
         string = ' '.join(words)
 
     return string

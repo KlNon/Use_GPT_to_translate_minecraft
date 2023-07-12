@@ -7,16 +7,22 @@
 """
 import json
 import os
+import shutil
 import zipfile
+
+from translate.settings import COMPARE_ASSETS_ONE, refresh_json
 
 
 def get_json_in_jar(gpt_path_word_groups, success_translated_path, jar_dir, output_dir):
+    # 删除assets文件夹进行初始化
+    shutil.rmtree(COMPARE_ASSETS_ONE)
     # 初始化2个动态json文件,一个机翻列表,1个成功翻译列表
-    with open(success_translated_path, 'w', encoding='utf-8') as f:
+    with open(success_translated_path, 'w', encoding='utf-8-sig') as f:
         json.dump({}, f, ensure_ascii=False, indent=4)
-    with open(gpt_path_word_groups, 'w', encoding='utf-8') as f:
+    with open(gpt_path_word_groups, 'w', encoding='utf-8-sig') as f:
         json.dump({}, f, ensure_ascii=False, indent=4)
 
+    refresh_json()
     # 遍历.jar文件所在的目录
     for filename in os.listdir(jar_dir):
         if filename.endswith(".jar"):

@@ -7,8 +7,9 @@ When translating game text, please strictly pay attention to the following aspec
 First, index should not be translated or changed.
 Secondly, for the mixed content of Chinese and English, keep the Chinese in it unchanged, and only translate the English translation in it.
 Next, the English that cannot be translated can keep the original text
-Finally, do not add the original text to the results.
 In addition, each jargon requires a one-to-one correspondence.
+Then, the content between the two square brackets "[" and "]" does not need to be translated
+Finally, do not add the original text to the results.
 ###
 The input content format is as follows:
 1^:<English text>

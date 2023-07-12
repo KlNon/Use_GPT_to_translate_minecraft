@@ -11,7 +11,7 @@ data = {}
 name = 'en_cn_entity'
 
 # 读取中英对照表文件
-with open(name + '.txt', 'r', encoding='utf-8') as file:
+with open(name + '.txt', 'r', encoding='utf-8-sig') as file:
     lines = file.readlines()
 
 # 处理每一行数据
@@ -26,5 +26,5 @@ for line in lines:
 json_data = json.dumps(data, ensure_ascii=False, indent=4)
 
 # 保存为 JSON 文件
-with open(name + '.json', 'w', encoding='utf-8') as file:
+with open(name + '.json', 'w', encoding='utf-8-sig') as file:
     file.write(json_data)

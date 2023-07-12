@@ -13,7 +13,7 @@ import re
 
 def extract_and_remove_keys(source_file, target_file):
     # 读取原始JSON文件内容
-    with open(source_file, 'r', encoding='utf-8') as f:
+    with open(source_file, 'r', encoding='utf-8-sig') as f:
         source_data = json.load(f)
 
     # 创建目标JSON文件的字典对象
@@ -27,7 +27,7 @@ def extract_and_remove_keys(source_file, target_file):
             target_data[key] = value
 
     # 将目标JSON内容写入目标JSON文件
-    with open(target_file, 'w', encoding='utf-8') as f:
+    with open(target_file, 'w', encoding='utf-8-sig') as f:
         json.dump(target_data, f, ensure_ascii=False, indent=4)
 
     # 删除原始JSON文件中的键值对
@@ -35,7 +35,7 @@ def extract_and_remove_keys(source_file, target_file):
         del source_data[key]
 
     # 将更新后的原始JSON内容写入原始JSON文件
-    with open(source_file, 'w', encoding='utf-8') as f:
+    with open(source_file, 'w', encoding='utf-8-sig') as f:
         json.dump(source_data, f, ensure_ascii=False, indent=4)
 
 

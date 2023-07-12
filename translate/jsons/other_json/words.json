@@ -1,4 +1,4 @@
-{
+﻿{
     "acacia": "金合欢",
     "button": "按钮",
     "door": "门",
@@ -420,5 +420,6 @@
     "Second Chance": "第二次机会",
     "Tick": "刻",
     "Sculk": "幽匿",
-    "Sculked": "幽匿"
+    "Sculked": "幽匿",
+    "waypoint": "路径点"
 }

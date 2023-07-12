@@ -22,14 +22,14 @@ def find_language_json(filename, lang_dir, output_dir):
     folder_name = en_us_json_path.split(os.path.sep)[-3]
 
     # 读取en_us.json文件
-    with open(os.path.join(str(output_dir), str(en_us_json_path)), 'r', encoding='utf-8') as f:
+    with open(os.path.join(str(output_dir), str(en_us_json_path)), 'r', encoding='utf-8-sig') as f:
         data_en = json.load(f)
 
     # 读取zh_cn.json文件
     zh_cn_json_path = en_us_json_path.replace('en_us.json', 'zh_cn.json')
     data_zh = {}
     if os.path.exists(zh_cn_json_path):
-        with open(zh_cn_json_path, 'r', encoding='utf-8') as f:
+        with open(zh_cn_json_path, 'r', encoding='utf-8-sig') as f:
             data_zh = json.load(f)
 
     # 统计单词频率

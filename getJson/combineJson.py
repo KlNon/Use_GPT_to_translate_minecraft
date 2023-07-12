@@ -16,7 +16,7 @@ def merge_json_files(directory, output_filename):
 
     # 遍历目录中的所有.json文件
     for filename in glob.glob(os.path.join(directory, '*.json')):
-        with open(filename, 'r', encoding='utf-8') as f:
+        with open(filename, 'r', encoding='utf-8-sig') as f:
             # 加载当前文件的数据
             data = json.load(f)
 
@@ -27,7 +27,7 @@ def merge_json_files(directory, output_filename):
                     merged_data[key.lower()] = data[key]
 
     # 将合并的数据写入到输出文件
-    with open(output_filename, 'w', encoding='utf-8') as f:
+    with open(output_filename, 'w', encoding='utf-8-sig') as f:
         json.dump(merged_data, f, ensure_ascii=False, indent=4)
 
 

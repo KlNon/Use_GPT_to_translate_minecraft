@@ -1,9 +1,9 @@
 """
-@Project ：list_ZH_CN 
+@Project ：list_ZH_CN
 @File    ：settings
 @Describe：
 @Author  ：KlNon
-@Date    ：2023/7/8 15:26 
+@Date    ：2023/7/8 15:26
 """
 import configparser
 import json
@@ -45,14 +45,23 @@ GPT_WORD_GROUPS_PATH = config.get('MAIN', 'gpt_path_word_groups')
 SUCCESS_TRANSLATED_PATH = config.get('MAIN', 'success_translated_path')
 
 # 读取中英对照表
-with open(TRANSLATION_TABLE_WORDS_PATH, 'r', encoding='utf-8') as f:
+with open(TRANSLATION_TABLE_WORDS_PATH, 'r', encoding='utf-8-sig') as f:
     translation_table_words = json.load(f)
 
-with open(TRANSLATION_TABLE_WORD_GROUPS_PATH, 'r', encoding='utf-8') as f:
+with open(TRANSLATION_TABLE_WORD_GROUPS_PATH, 'r', encoding='utf-8-sig') as f:
     translation_table_word_groups = json.load(f)
 
-with open(GPT_WORD_GROUPS_PATH, 'r', encoding='utf-8') as f:
+with open(GPT_WORD_GROUPS_PATH, 'r', encoding='utf-8-sig') as f:
     gpt_word_groups = json.load(f)
 
-with open(SUCCESS_TRANSLATED_PATH, 'r', encoding='utf-8') as f:
+with open(SUCCESS_TRANSLATED_PATH, 'r', encoding='utf-8-sig') as f:
     success_translated = json.load(f)
+
+
+def refresh_json():
+    global gpt_word_groups,success_translated
+    with open(GPT_WORD_GROUPS_PATH, 'r', encoding='utf-8-sig') as f:
+        gpt_word_groups = json.load(f)
+
+    with open(SUCCESS_TRANSLATED_PATH, 'r', encoding='utf-8-sig') as f:
+        success_translated = json.load(f)
