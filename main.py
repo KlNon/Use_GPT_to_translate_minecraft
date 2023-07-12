@@ -7,7 +7,7 @@ from translate.translate_process.compare_translate import trans_with_words
 from translate.translate_process.gpt_translate import trans_with_gpt
 from translate.translate_process.translate_tools import save_trans_json, save_success
 from translate.translate_start.step_one_get_json_in_jar import get_json_in_jar
-from translate.translate_start.step_three_find_out_json import find_en_us_json
+from translate.translate_start.step_three_find_out_json import find_language_json
 from translate.translate_start.step_two_compare_json import compare_all_assets
 
 # 谷歌翻译
@@ -23,7 +23,7 @@ def process_directory(path):
         return
 
     for filename in os.listdir(lang_dir):
-        result = find_en_us_json(filename, lang_dir, OUTPUT_DIR)
+        result = find_language_json(filename, lang_dir, OUTPUT_DIR)
         if result is not None:
             process_file(result)
 
@@ -34,13 +34,13 @@ def process_file(result):
     complete_translated = False
     auto_control_count = 0
     while not complete_translated:
-        folder_name, data, path, word_counts = result
+        folder_name, data_en, path, word_counts, data_zh = result
         # 如果该模组已经成功翻译，则跳过
         if folder_name in success_translated and success_translated[folder_name]:
             break
         print(f"{i} {folder_name}")
-        trans_with_words(data, path, folder_name)
-        cost, complete_translated, auto_control_count = trans_with_gpt(data, path, folder_name, auto_control_count)
+        trans_with_words(data_en, data_zh, path, folder_name)
+        cost, complete_translated, auto_control_count = trans_with_gpt(data_en, path, folder_name, auto_control_count)
         total_cost = total_cost + cost
 
         print(f"-使用的token总数为:{total_cost}")
@@ -53,9 +53,9 @@ def process_file(result):
             if new_translation == "p":
                 complete_translated = True
         if complete_translated:
-            for data_key, value in data.items():
-                data[data_key] = value.replace(' ', '')
-            save_trans_json(data, path)
+            for data_key, value in data_en.items():
+                data_en[data_key] = value.replace(' ', '')
+            save_trans_json(data_en, path)
             print(f"模组 '{folder_name}' 翻译完毕.")
             save_success(SUCCESS_TRANSLATED_PATH, success_translated, folder_name, True)
 
@@ -85,6 +85,3 @@ if __name__ == "__main__":
 
     # 输出最终结果
     print(high_rate_of_words)
-
-# TODO 新功能,增加在将en和zh对比的内容制成json,方便长句翻译,如一个mod中的物品翻译了,但句子中该物品仍是英文,那么该长句会在对照翻译中替换该物品的英文
-# TODO 替换英文可以用replace试试

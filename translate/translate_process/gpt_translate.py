@@ -1,10 +1,3 @@
-"""
-@Project ：list_ZH_CN 
-@File    ：gpt_translate
-@Describe：
-@Author  ：KlNon
-@Date    ：2023/7/8 15:20 
-"""
 import re
 import openai
 from translate.settings import USE_OPENAI, gpt_word_groups
@@ -23,7 +16,7 @@ def translate_batch(batch_data, content):
     return response
 
 
-def process_response(response, batch_data, total_translated_data, data):
+def process_response(response, total_translated_data, data, key_to_index):
     translations = response.get("choices")[0]["message"]["content"].strip().replace('\\n',
                                                                                     '\n').replace(',', '').replace(
         '\n', '!').replace(']]', '\n').split('!')
@@ -31,22 +24,21 @@ def process_response(response, batch_data, total_translated_data, data):
     total_cost = usage['total_tokens']
 
     compared_indexes = set()
-    for key, translation in zip(batch_data.keys(), translations):
+    for translation in translations:
         translation = translation.replace('<', '').replace('>', '')
         match = re.match(r'(\d+)\^:', translation)
         if match:
             index_of_translation = int(match.group(1))
         else:
-            index_of_translation = int(translation.split('^:', 1)[0].strip())  # 原先的是index,忘记什么用了
+            continue  # 如果没有匹配的index，就跳过这个translation
         translation = translation.split('^:', 1)[-1]
-        gpt_word_groups[data[index_of_translation]] = translation
+        gpt_word_groups[data[key_to_index[index_of_translation]]] = translation
         # 保持第一次翻译的结果,避免重复翻译
-        if key not in total_translated_data:
+        if index_of_translation not in total_translated_data:
             total_translated_data[index_of_translation] = translation
-            data[index_of_translation] = translation
+            data[key_to_index[index_of_translation]] = translation
         if index_of_translation not in compared_indexes:
             compared_indexes.add(index_of_translation)
-            del index_of_translation
     return total_cost
 
 
@@ -57,12 +49,13 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
     complete_translated = False
 
     if USE_OPENAI:
-        print(f'-开始使用GPT进行翻译 Mod:<{folder_name}>')
+        print(f'Mod:<{folder_name}> -开始使用GPT进行翻译')
 
         data_to_translate = {key: val for key, val in data.items() if re.search('[a-zA-Z\u4e00-\u9fff]', val)}
 
         batch_data = {}
         total_translated_data = {}
+        key_to_index = {}
 
         for index, (key, val) in enumerate(data_to_translate.items(), start=1):
 
@@ -71,7 +64,8 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
 
             if len(val) <= 20 or not chinese_ratio(val, 0.4):
                 val = val.replace('\n', ']]')  # 先将换行替换成一个基本不可能在翻译文本中出现的字符,避免出现问题
-                batch_data[key] = f"{index}^:{val}"
+                batch_data[index] = f"{index}^:{val}"
+                key_to_index[index] = key
 
             # 如果达到批次数量或者是最后一条数据,则进行翻译
             if len(batch_data) == BATCH_SIZE or key == list(data_to_translate.keys())[-1]:
@@ -90,8 +84,9 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
                         with open('translate/content.txt', 'r', encoding='utf-8') as file:
                             content = file.read()
                         response = translate_batch(batch_data, content)
-                        total_cost += process_response(response, batch_data, total_translated_data, data)
+                        total_cost += process_response(response, total_translated_data, data, key_to_index)
                         batch_data = {}  # Clear for the next batch
+                        key_to_index = {}  # Clear for the next batch
                     except Exception as e:
                         print(f"--Error during batch translation in file '{name}': {e}")
 

@@ -30,6 +30,7 @@ def del_the_space(data):
 
 
 def save_trans_json(data, path):
+    del_the_space(data)
     # 将翻译后的内容保存到zh_cn.json文件
     with open(os.path.join(OUTPUT_DIR, path.replace('en_us.json', 'zh_cn.json')), 'w',
               encoding='utf-8') as f:

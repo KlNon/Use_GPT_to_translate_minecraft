@@ -9,12 +9,17 @@ from translate.settings import (
 from translate.translate_process.translate_tools import renew_words, save_trans_json, chinese_ratio
 
 
-def check_and_replace_word_group(data, key, value, word_group, translation_table):
+def create_intersection_dict(data_en, data_zh):
+    """Create a new dictionary with keys common in both data_en and data_zh."""
+    return {data_en[key].lower(): data_zh[key] for key in data_en if key in data_zh}
+
+
+def check_and_replace_word_group(data_en, key, word_group, translation_table):
     combined_word = ' '.join(word_group).lower()
     if combined_word in translation_table:
         combined_translation = translation_table[combined_word]
         if combined_translation:
-            data[key] = value.replace(combined_word, combined_translation)
+            data_en[key] = combined_translation
             return True
     return False
 
@@ -25,14 +30,46 @@ def generate_word_combinations(words):
             yield words[i:i + r]
 
 
-def trans_with_words(data, path, folder_name):
-    for key, value in data.items():
+def count_chars(string, lang):
+    """Count the number of English or Chinese characters in a string."""
+    if lang.lower() == 'en':
+        return len(re.findall(r'[a-zA-Z]', string))
+    elif lang.lower() == 'zh':
+        return len(re.findall(r'[\u4e00-\u9fff]', string))
+
+
+def add_space_if_necessary(string):
+    """Add space between words if English characters make up more than 30% of the string."""
+    total_chars = len(string)
+    english_chars = count_chars(string, 'en')
+    chinese_chars = count_chars(string, 'zh')
+
+    # Only consider Chinese and English characters
+    total_considered_chars = english_chars + chinese_chars
+
+    if total_considered_chars == 0:
+        return string
+
+    english_ratio = english_chars / total_considered_chars
+
+    if english_ratio > 0.3:
+        words = re.findall(r'\w+', string)
+        string = ' '.join(words)
+
+    return string
+
+
+def trans_with_words(data_en, data_zh, path, folder_name):
+    data_translated = create_intersection_dict(data_en, data_zh)
+    for key, value in data_en.items():
         words = value.split()
         # 先对比词组,在对比单词
         for word_group in generate_word_combinations(words):
-            if check_and_replace_word_group(data, key, value, word_group, translation_table_word_groups):
+            if check_and_replace_word_group(data_en, key, word_group, data_translated):
                 continue
-            if check_and_replace_word_group(data, key, value, word_group, gpt_word_groups):
+            if check_and_replace_word_group(data_en, key, word_group, translation_table_word_groups):
+                continue
+            if check_and_replace_word_group(data_en, key, word_group, gpt_word_groups):
                 continue
 
         # 如果需求翻译的内容超过4个单词,则跳过
@@ -52,19 +89,18 @@ def trans_with_words(data, path, folder_name):
                 else:
                     if NEED_MANUAL_CONTROL:
                         if NEED_MANUAL_CONTROL_GROUPS:
-                            handle_group_translation(key, value, data)
+                            handle_group_translation(key, value, data_en)
                             break
                         handle_word_translation(lowercase_word, key, value, words, i)
 
-        if re.search('[a-zA-Z]', data[key]):
-            data[key] = ' '.join(words)
+        data_en[key] = add_space_if_necessary(data_en[key])
 
     renew_words()
-    save_trans_json(data, path)
+    save_trans_json(data_en, path)
     print(f'- Mod:<{folder_name}> 对照翻译结束')
 
 
-def handle_group_translation(key, value, data):
+def handle_group_translation(key, value, data_en):
     print(f"-词组 '{value}' 不在对照表中,其键值对为:{key}:{value}")
     new_translation = input("--请输入完整的翻译: ")
     if new_translation == "":
@@ -73,7 +109,7 @@ def handle_group_translation(key, value, data):
         print("---跳过词汇完整对照翻译")
     else:
         translation_table_word_groups[value] = new_translation
-        data[key] = new_translation
+        data_en[key] = new_translation
 
 
 def handle_word_translation(lowercase_word, key, value, words, i):
