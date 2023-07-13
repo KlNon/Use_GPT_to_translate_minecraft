@@ -44,6 +44,8 @@ TRANSLATION_TABLE_WORD_GROUPS_PATH = config.get('MAIN', 'translation_table_path_
 GPT_WORD_GROUPS_PATH = config.get('MAIN', 'gpt_path_word_groups')
 SUCCESS_TRANSLATED_PATH = config.get('MAIN', 'success_translated_path')
 
+DEL_PATH = config.get('MAIN', 'del_path')
+
 # 读取中英对照表
 with open(TRANSLATION_TABLE_WORDS_PATH, 'r', encoding='utf-8-sig') as f:
     translation_table_words = json.load(f)

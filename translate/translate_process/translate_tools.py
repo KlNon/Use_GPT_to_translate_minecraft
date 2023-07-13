@@ -56,3 +56,36 @@ def chinese_ratio(value, limit_ratio):
     if ratio > limit_ratio:  # 如果中文占比超过比例
         return True
     return False
+
+
+def remove_files(path):
+    for root, dirs, files in os.walk(path):
+        if 'en_us.json' in files:
+            try:
+                os.remove(os.path.join(root, 'en_us.json'))
+                print(f"成功删除文件：{os.path.join(root, 'en_us.json')}")
+            except Exception as e:
+                print(f"无法删除文件：{os.path.join(root, 'en_us.json')}")
+                print(f"错误信息：{e}")
+        for dir_inside in dirs:
+            remove_files(dir_inside)
+
+
+def replace_text(path, original_text, new_text):
+    for root, dirs, files in os.walk(path):
+        if 'zh_cn.json' in files:
+            try:
+                with open(os.path.join(root, 'zh_cn.json'), 'r', encoding='utf-8-sig') as f:
+                    data = json.load(f)
+                # 假设 data 是一个字典，我们将遍历它的所有键值对
+                for key in data:
+                    if isinstance(data[key], str):  # 确保值是一个字符串，然后进行替换
+                        data[key] = data[key].replace(original_text, new_text)
+                with open(os.path.join(root, 'zh_cn.json'), 'w', encoding='utf-8-sig') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=4)
+                print(f"成功替换文字在文件：{os.path.join(root, 'zh_cn.json')}")
+            except Exception as e:
+                print(f"无法替换文字在文件：{os.path.join(root, 'zh_cn.json')}")
+                print(f"错误信息：{e}")
+        for dir_inside in dirs:
+            replace_text(dir_inside, original_text, new_text)

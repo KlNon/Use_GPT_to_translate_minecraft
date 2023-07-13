@@ -60,9 +60,9 @@ def process_file(result):
 
 if __name__ == "__main__":
     # 清洗翻译文件,第一次请取消下面两条的注释
-    # get_json_in_jar(GPT_WORD_GROUPS_PATH, SUCCESS_TRANSLATED_PATH, JAR_DIR, OUTPUT_DIR)
-    # # 因为重置了gpt_groups和success_translated,所以刷新一下
-    # compare_all_assets(COMPARE_ASSETS_ONE, COMPARE_ASSETS_TWO, COMPARE_ASSETS_THREE)
+    get_json_in_jar(GPT_WORD_GROUPS_PATH, SUCCESS_TRANSLATED_PATH, JAR_DIR, OUTPUT_DIR)
+    # 因为重置了gpt_groups和success_translated,所以刷新一下
+    compare_all_assets(COMPARE_ASSETS_ONE, COMPARE_ASSETS_TWO, COMPARE_ASSETS_THREE)
 
     high_rate_of_words = Counter()  # 创建空的Counter对象.统计mod中的高频词汇
     translation_table_words_counter = Counter()  # 创建空的Counter对象

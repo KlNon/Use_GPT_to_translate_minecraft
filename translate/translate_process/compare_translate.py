@@ -19,7 +19,7 @@ def check_and_replace_word_group(data_en, key, word_group, translation_table):
     if combined_word in translation_table:
         combined_translation = translation_table[combined_word]
         if combined_translation and chinese_ratio(combined_translation, 0.7):
-            data_en[key] = combined_translation
+            data_en[key] = data_en[key].lower().replace(combined_word, combined_translation)
             return True
     return False
 
@@ -52,8 +52,8 @@ def trans_with_words(data_en, data_zh, path, folder_name):
             if check_and_replace_word_group(data_en, key, word_group, gpt_word_groups):
                 continue
 
-        # 如果需求翻译的内容超过4个单词,则跳过
-        if len(words) > 4:
+        # 如果需求翻译的内容超过6个单词,则跳过
+        if len(words) > 6:
             continue
 
         if chinese_ratio(value, 0.5):
@@ -65,7 +65,7 @@ def trans_with_words(data_en, data_zh, path, folder_name):
                 if lowercase_word in translation_table_words:
                     translation = translation_table_words[lowercase_word]
                     if translation:
-                        words[i] = translation
+                        data_en[key] = data_en[key].lower().replace(lowercase_word, translation)
                 else:
                     if NEED_MANUAL_CONTROL:
                         if NEED_MANUAL_CONTROL_GROUPS:

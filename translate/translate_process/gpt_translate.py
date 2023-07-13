@@ -58,8 +58,9 @@ def trans_with_gpt(data, name, folder_name, auto_control_count):
 
     if USE_OPENAI:
         print(f'Mod:<{folder_name}> -开始使用GPT进行翻译')
-
-        data_to_translate = {key: val for key, val in data.items() if re.search('[a-zA-Z]', val)}
+        # 包含英文,同时中文占比不超过30%
+        data_to_translate = {key: val for key, val in data.items() if
+                             re.search('[a-zA-Z]', val) and not chinese_ratio(val, 0.3)}
 
         # Check if all values in data_to_translate are Chinese
         if all(chinese_ratio(val, 0.5) for val in data_to_translate.values()):
